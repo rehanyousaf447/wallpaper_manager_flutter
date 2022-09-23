@@ -49,6 +49,14 @@ class WallpaperManagerFlutterPlugin : FlutterPlugin, MethodChannel.MethodCallHan
           e.printStackTrace()
         }
       }
+      "setDefaultWallpaper" -> {
+        try {
+          val wm = WallpaperManager.getInstance(context)
+          wm.clear()
+        } catch (e: IOException) {
+          e.printStackTrace()
+        }
+      }
     }
   }
 }

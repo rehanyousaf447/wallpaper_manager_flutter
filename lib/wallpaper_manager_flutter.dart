@@ -24,6 +24,10 @@ class WallpaperManagerFlutter {
 
   static const int BOTH_SCREENS = 3;
   // To Set wallpaper for Both Screens.
+  Future<void> setDefaultWallpaper() async {
+    _channel.invokeMethod('setDefaultWallpaper');
+  }
+
 
   // Function to set Wallpaper
   Future<void> setwallpaperfromFile(imagefile, location) async {
